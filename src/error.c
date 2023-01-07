@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_errors.c                                     :+:      :+:    :+:   */
+/*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 08:45:54 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/03 19:24:35 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/03 20:10:43 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,23 @@
 int	check_fractol_set(int argc, char ** argv)
 {
 	int index;
-	if(argc < 2 || argc > 4)
+	if(argc >= 2 && argc <= 4)
 	{
-		printf(MSG);
-		return(ERROR);
+		index = 0;
+		while(argv[1][index])
+		{
+			argv[1][index] = ft_tolower(argv[1][index]);
+			index++;
+		}
+		if(ft_strncmp(argv[1], "mandelbrot", 11) == 0 && argc == 2)
+			return(SUCCESS);
+		if(ft_strncmp(argv[1], "julia", 6) == 0 && argc == 4)
+			return(SUCCESS);
+		if(ft_strncmp(argv[1], "bia", 4) == 0 && argc == 2)
+			return(SUCCESS);
+			
 	}
-	index = 0;
-	while(argv[1][index])
-	{
-		argv[1][index] = ft_tolower(argv[1][index]);
-		index++;
-	}
-	if(ft_strncmp(argv[1], "mandelbrot", 11) == 0)
-		return(SUCCESS);
-	if(ft_strncmp(argv[1], "julia", 6) == 0)
-		return(SUCCESS);
+	printf(MSG);
 	return(ERROR);
 }
 

@@ -2,7 +2,10 @@ NAME = fractol
 
 LIB = ./libft/libft.a
 
-SOURCE = ./src/main.c ./src/check_errors.c #./src/fractol.c 
+SOURCE = ./src/main.c \
+		 ./src/error.c \
+		 ./src/window.c \
+		 ./src/hooks.c \
 
 OBJECTS = $(FILES:.c=.o) 
 
