@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 20:58:00 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/18 23:34:37 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/20 00:05:56 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,37 +21,54 @@
 #include <X11/keysym.h>
 #include "../libftprintf/source/ft_printf.h"
 
+//auxiliares para retorno de função 0 -> ok diferente -> erro
 # define ERROR EXIT_FAILURE
 # define SUCCESS EXIT_SUCCESS
+//definições da janela
+# define WIDTH 600
+# define HEIGHT 600
+// definições de mensagem de erro
 # define MSG0 "Invalid option! You need to choose and type the name of the fractal set:"
 # define MSG1 "In case of Mandelbrot set, type only: mandelbrot"
 # define MSG2 "In case of Julia set, type the name folowed the parameters: Julia 0.4 -0.6"
 # define MSG3 "exemples: ./fractol Mandelbrot or ./Julia 0.4 0.6"
 
-// typedef struct	s_vars //fractol
-// {
+typedef struct	s_math //variáveis dos cálculos.
+{
+    int (*fractol)(double complex_real, double complex_img);
+}t_math;
 
-// }t_vars;
-
-// typedef struct	s_minilibx //mlx
-// {
-//     int (*fractol)(double complex_real, double complex_img);
-// }t_minilibx;
-
+typedef struct	s_lib //variáveis da mlx
+{
+	void *mlx;
+	void *win;
+	void *img;
+	char *add_img;
+	int bits_per_pixel;
+	int size_line;
+	int endian;
+	//auxiliares
+	char *title;
+	int (*fractol)(double complex_real, double complex_img);
+}t_lib;
 
 
 //main.c
+int creating_window(t_lib *lib);
+int creating_image(t_lib *lib);
 
 //error.c
 int check_fractol_set(int argc, char ** argv);
 
-// //window.c
-// int creating_window(t_mlx *mlx);
+
+
+
 // int destroying_window(t_mlx *mlx);
 
-// //hooks.c
+//events.c
 // int keyboard_events(int keycode, t_mlx *mlx);
 // int mouse_events(int event, int x, int y, t_mlx *mlx);
+
 
 
 #endif

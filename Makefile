@@ -6,7 +6,7 @@
 #    By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 20:26:37 by bede-car          #+#    #+#              #
-#    Updated: 2023/01/19 20:59:38 by bede-car         ###   ########.fr        #
+#    Updated: 2023/01/20 00:05:17 by bede-car         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,14 +16,14 @@ LIB = ./libftprintf/libftprintf.a
 
 SOURCE = ./sources/main.c \
 		 ./sources/errors.c \
+		 ./sources/events.c \
 #		 ./sources/window.c \
-#		 ./sources/hooks.c \
 #		 ./sources/math.c \
 #		 ./sources/fract.c \
 
 OBJECTS = $(FILES:.c=.o) 
 
-CFLAG = -Imlx -Lmlx -lmlx -lXext -lX11 -lm -Wall -Wextra -Werror
+CFLAG = -Imlx -Lmlx -lmlx -lXext -lX11 -lm -Wall -Wextra -Werror -I./includes
 
 MAKEFLAGS = --no-print-directory
 
