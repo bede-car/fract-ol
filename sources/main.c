@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 20:58:11 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/20 00:02:22 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/20 00:27:07 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main(int argc, char** argv)
 	// lib.title=argv[1];
 	if(creating_window(&lib) == SUCCESS && creating_image(&lib) == SUCCESS)
 	{
-		//HOOKS
+		//eventos
 		//desenhar pixel
 		mlx_loop(lib.mlx);
 	}
@@ -58,7 +58,6 @@ int creating_image(t_lib *lib)
 //validar parametros de entrada ok
 //criar janela ok 
 //criar imagem ok 
-//addr
 //events mouse
 //events teclado
 //desenhar na tela

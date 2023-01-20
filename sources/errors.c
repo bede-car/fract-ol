@@ -6,28 +6,38 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 20:58:14 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/20 00:01:59 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/20 11:33:02 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
-int check_fractol_set(int argc, char ** argv)
+void	invalid_option(void)
 {
-    int index;
-	if(argc >= 2 && argc <= 4)
-	{
-		index = 0;
-		while(argv[1][index])
-		{
-			argv[1][index] = ft_tolower(argv[1][index]);
-			index++;
-		}
-		if(ft_strncmp(argv[1], "mandelbrot", 11) == 0 && argc == 2)
-			return(SUCCESS);
-		if(ft_strncmp(argv[1], "julia", 6) == 0 && argc == 4)
-			return(SUCCESS);
-    }
-    ft_printf(MSG0"\n"MSG1"\n"MSG2"\n"MSG3);
-    return(ERROR);
+	ft_printf("This program renders 2 types of fractal set, ");
+	ft_printf("you need to choose one of them.\n");
+	ft_printf("\nOptions available: \n");
+	ft_printf("\tMandelbrot\n\tJulia parameter1 parameter2\n\n");
+	ft_printf("Exemples: \n");
+	ft_printf("\t$./fractol mandelbrot\n");
+	ft_printf("\t$./fractol julia 0.4 -0.6\n\n");	
+	ft_printf("Notes: Uppercase or lowercase letters are accepted, ");
+	ft_printf("enjoy the view!\n\n");
+	exit(ERROR);
 }
+
+void	parameter_not_found(void)
+{
+	ft_printf("\n>>>>>>>>>>>>>>> No parameter was provided ! <<<<<<<<<<<<<<<\n\n");
+}
+
+void	error_mandelbrot(void)
+{
+	ft_printf("\n>>>>> Argument is not expected for Mandelbrot set. <<<<<\n\n");
+}
+
+void	error_julia(void)
+{
+	ft_printf("\n>>>>> Julia needs 2 parameters as arguments.<<<<<\n\n");
+}
+

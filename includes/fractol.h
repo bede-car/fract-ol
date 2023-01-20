@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 20:58:00 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/20 00:05:56 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/20 11:27:14 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@
 # define WIDTH 600
 # define HEIGHT 600
 // definições de mensagem de erro
-# define MSG0 "Invalid option! You need to choose and type the name of the fractal set:"
-# define MSG1 "In case of Mandelbrot set, type only: mandelbrot"
-# define MSG2 "In case of Julia set, type the name folowed the parameters: Julia 0.4 -0.6"
-# define MSG3 "exemples: ./fractol Mandelbrot or ./Julia 0.4 0.6"
+// # define MSG0 "Invalid option! You need to choose and type the name of the fractal set:"
+// # define MSG1 "In case of Mandelbrot set, type only: mandelbrot"
+// # define MSG2 "In case of Julia set, type the name folowed the parameters: Julia 0.4 -0.6"
+// # define MSG3 "exemples: ./fractol Mandelbrot or ./Julia 0.4 0.6"
 
 typedef struct	s_math //variáveis dos cálculos.
 {
@@ -48,7 +48,7 @@ typedef struct	s_lib //variáveis da mlx
 	int size_line;
 	int endian;
 	//auxiliares
-	char *title;
+	// char *title;
 	int (*fractol)(double complex_real, double complex_img);
 }t_lib;
 
@@ -58,8 +58,15 @@ int creating_window(t_lib *lib);
 int creating_image(t_lib *lib);
 
 //error.c
-int check_fractol_set(int argc, char ** argv);
+void	invalid_option(void);
+void	parameter_not_found(void);
+void	error_mandelbrot(void);
+void	error_julia(void);
 
+//set_fractal.c
+int check_fractol_set(int argc, char ** argv);
+int	is_mandelbrot(int argc, char **argv);
+int	is_julia(int argc, char **argv);
 
 
 
