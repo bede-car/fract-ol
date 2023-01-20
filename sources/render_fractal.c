@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fractal_render.c                                   :+:      :+:    :+:   */
+/*   render_fractal.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 15:17:49 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/20 18:33:41 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/20 20:53:09 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
-void render(t_data *data)
+void render_fractal(t_data *data)
 {
 	data->math.pixel_x = 0;
 	data->math.pixel_y = 0;
+	init_math(&data->math);
 	while (data->math.pixel_x < WIDTH)
 	{
 		while (data->math.pixel_y < HEIGHT)
@@ -29,20 +30,6 @@ void render(t_data *data)
 	}
 }
 	
-
-int mandelbrot(double complex_real, double complex_img)
-{
-
-	//z
-	return (SUCCESS);
-}
-
-int	julia(double complex_real, double complex_img)
-{
-
-    return (SUCCESS);
-}
-
 void	my_mlx_pixel_put(t_lib *lib, int x, int y, int color)
 {
 	char	*img_point;
@@ -54,13 +41,11 @@ void	my_mlx_pixel_put(t_lib *lib, int x, int y, int color)
 
 int define_color(t_math *math)
 {
-	
-	math->fractal(math->complex_real, math->complex_img);
-	
-}
-
-complex_numbers()
-{
-
-	
+	math->fractal(math);
+	if(math->interations == math->max_interation)
+	{
+		return(0x000000);
+	}
+	else
+		return(0xFFFFFF);
 }

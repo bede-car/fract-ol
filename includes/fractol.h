@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 20:58:00 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/20 18:13:01 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/20 20:49:20 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,17 @@ typedef struct	s_math //variáveis dos cálculos.
 	int pixel_y;
 	double complex_real;
 	double complex_img;
-	int (*fractal)(double complex_real, double complex_img);
+	double x_min;
+	double x_max;
+	double y_min;
+	double y_max;
+	double x_square;
+	double y_square;
+	double number_real;
+	double number_img;
+	int interations;
+	int max_interation;
+	void (*fractal)(struct s_math *math);
 }t_math;
 
 typedef struct	s_lib //variáveis da mlx
@@ -59,7 +69,6 @@ typedef struct	s_data //variáveis dos cálculos.
 int creating_window(t_lib *lib);
 int creating_image(t_lib *lib);
 int destroying_window(t_lib *lib);
-void render(t_data *data);
 
 //error.c
 void	invalid_option(void);
@@ -77,11 +86,16 @@ int	is_julia(int argc, char **argv);
 int keyboard_events(int keycode, t_lib *mlx);
 int mouse_events(int event, int x, int y, t_lib *mlx);
 
-//fractal_render.c
-int define_color();
+//render_fractal.c
+void render_fractal(t_data *data);
 void my_mlx_pixel_put(t_lib *lib, int x, int y, int color);
-int mandelbrot(double complex_real, double complex_img);
-int julia(double complex_real, double complex_img);
+int define_color();
+
+//calc_fractal.c
+void complex_numbers(t_math *math);
+void mandelbrot(t_math *math);
+void julia(t_math *math);
+void init_math(t_math *math);
 
 
 

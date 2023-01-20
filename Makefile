@@ -6,7 +6,7 @@
 #    By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 20:26:37 by bede-car          #+#    #+#              #
-#    Updated: 2023/01/20 18:43:04 by bede-car         ###   ########.fr        #
+#    Updated: 2023/01/20 20:55:02 by bede-car         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,11 +15,11 @@ NAME = fractol
 LIB = ./libftprintf/libftprintf.a
 
 SOURCE = ./sources/main.c \
-		 ./sources/define_fractal_set.c \
+		 ./sources/set_fractal.c \
 		 ./sources/errors.c \
 		 ./sources/events.c \
 		 ./sources/render_fractal.c \
-		 ./sources/calc_fractal.c \		 
+		 ./sources/calc_fractal.c 	 
 
 
 OBJS = $(SOURCE:.c=.o) 
