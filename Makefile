@@ -6,7 +6,7 @@
 #    By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 20:26:37 by bede-car          #+#    #+#              #
-#    Updated: 2023/01/20 15:19:49 by bede-car         ###   ########.fr        #
+#    Updated: 2023/01/20 16:47:30 by bede-car         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SOURCE = ./sources/main.c \
 #		 ./sources/window.c \
 #		 ./sources/math.c \
 
-OBJECTS = $(FILES:.c=.o) 
+OBJS = $(SOURCE:.c=.o) 
 
 CFLAG = -Imlx -Lmlx -lmlx -lXext -lX11 -lm -Wall -Wextra -Werror -I./includes
 
@@ -30,7 +30,8 @@ MAKEFLAGS = --no-print-directory
 
 HEADER	= ./includes/fractol.h
 
-.c.o : ${HEADER}
+#.c.o : ${HEADER}
+%.o:%.c ${HEADER}
 	cc ${CFLAG} -c $< -o $@ 
 
 #all : $(NAME)
@@ -42,7 +43,7 @@ libftprintf:
 $(NAME) : ${LIB} ${OBJS} 
 #	$(MAKE) bonus -C ./libft 
 #	mv ./libft/libft.a $(LIB)
-	cc ${SOURCE} ${LIB} ${CFLAG} -o ${NAME} 
+	cc ${OBJS} ${LIB} ${CFLAG} -o ${NAME} 
 
 clean :
 	rm -f ${OBJS} 

@@ -6,7 +6,7 @@
 #    By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/01 02:00:34 by bede-car          #+#    #+#              #
-#    Updated: 2022/07/02 21:39:39 by bede-car         ###   ########.fr        #
+#    Updated: 2023/01/20 16:27:30 by bede-car         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ OBJS	= $(FILES:.c=.o)
 
 OBJSB	= $(FILESB:.c=.o) 
 
-CFLAG	= -Wall -Werror -Wextra 
+CFLAG	= -Wall -Werror -Wextra -I.
 
 MAKEFLAGS = --no-print-directory
 
@@ -39,7 +39,7 @@ HEADER	= libft.h
 all : $(NAME)
 
 $(NAME) : ${OBJS} 
-	ar -rc ${NAME} $^
+	ar -rcs ${NAME} $^
 	
 clean :
 	rm -f ${OBJS} ${OBJSB}

@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 20:58:00 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/20 15:10:50 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/20 16:47:20 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,10 @@
 //definições da janela
 # define WIDTH 600
 # define HEIGHT 600
-// definições de mensagem de erro
-// # define MSG0 "Invalid option! You need to choose and type the name of the fractal set:"
-// # define MSG1 "In case of Mandelbrot set, type only: mandelbrot"
-// # define MSG2 "In case of Julia set, type the name folowed the parameters: Julia 0.4 -0.6"
-// # define MSG3 "exemples: ./fractol Mandelbrot or ./Julia 0.4 0.6"
 
 typedef struct	s_math //variáveis dos cálculos.
 {
-    int (*fractal)(double complex_real, double complex_img);
+	int (*fractal)(double complex_real, double complex_img);
 }t_math;
 
 typedef struct	s_lib //variáveis da mlx
@@ -80,6 +75,7 @@ int mouse_events(int event, int x, int y, t_lib *mlx);
 //fractal.c
 int mandelbrot(double complex_real, double complex_img);
 int julia(double complex_real, double complex_img);
+
 
 
 #endif
