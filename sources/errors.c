@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 20:58:14 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/20 11:33:02 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/20 12:01:57 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	invalid_option(void)
 
 void	parameter_not_found(void)
 {
-	ft_printf("\n>>>>>>>>>>>>>>> No parameter was provided ! <<<<<<<<<<<<<<<\n\n");
+	ft_printf("\n>>>>> No parameter was provided ! <<<<<\n\n");
 }
 
 void	error_mandelbrot(void)

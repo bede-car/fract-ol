@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 20:58:11 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/20 00:27:07 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/20 14:50:58 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,13 @@
 
 int main(int argc, char** argv)
 {
-	t_lib	lib;
-	if(check_fractol_set(argc, argv) == ERROR)
-		return(ERROR);
-	// lib.title=argv[1];
-	if(creating_window(&lib) == SUCCESS && creating_image(&lib) == SUCCESS)
+	t_data	data;
+	check_fractol_set(argc, argv, &data.math);
+	if(creating_window(&data.lib) == SUCCESS && creating_image(&data.lib) == SUCCESS)
 	{
 		//eventos
 		//desenhar pixel
-		mlx_loop(lib.mlx);
+		mlx_loop(data.lib.mlx);
 	}
 	return(ERROR);
 }
@@ -33,7 +31,6 @@ int creating_window(t_lib *lib)
 	if(lib->mlx == NULL)
 		return(ERROR);
 	lib->win = mlx_new_window(lib->mlx, WIDTH, HEIGHT, "Fract’ol");
-	// lib->win=mlx_new_window(lib->mlx, WIDTH, HEIGHT, lib->title);
 	if(lib->win == NULL)
 	{
 		free(lib->mlx);
@@ -55,14 +52,11 @@ int creating_image(t_lib *lib)
 	return(SUCCESS);
 }
 
-//validar parametros de entrada ok
-//criar janela ok 
-//criar imagem ok 
-//events mouse
-//events teclado
-//desenhar na tela
-//loop
-
-
-// ARGC ARGV 
-// 
+int destroying_window(t_lib *lib)
+{
+	mlx_destroy_image(lib->mlx, lib->img);
+	mlx_destroy_window(lib->mlx, lib->win);
+	mlx_destroy_display(lib->mlx);
+	free(lib->mlx);
+	exit(SUCCESS);
+}

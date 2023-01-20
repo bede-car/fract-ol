@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 20:58:00 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/20 11:27:14 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/20 15:10:50 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@
 
 typedef struct	s_math //variáveis dos cálculos.
 {
-    int (*fractol)(double complex_real, double complex_img);
+    int (*fractal)(double complex_real, double complex_img);
 }t_math;
 
 typedef struct	s_lib //variáveis da mlx
@@ -47,15 +47,19 @@ typedef struct	s_lib //variáveis da mlx
 	int bits_per_pixel;
 	int size_line;
 	int endian;
-	//auxiliares
-	// char *title;
-	int (*fractol)(double complex_real, double complex_img);
 }t_lib;
+
+typedef struct	s_data //variáveis dos cálculos.
+{
+	t_lib lib;
+    t_math math;
+}t_data;
 
 
 //main.c
 int creating_window(t_lib *lib);
 int creating_image(t_lib *lib);
+int destroying_window(t_lib *lib);
 
 //error.c
 void	invalid_option(void);
@@ -64,18 +68,18 @@ void	error_mandelbrot(void);
 void	error_julia(void);
 
 //set_fractal.c
-int check_fractol_set(int argc, char ** argv);
+void check_fractol_set(int argc, char ** argv, t_math *math);
+void strtolower(char *str);
 int	is_mandelbrot(int argc, char **argv);
 int	is_julia(int argc, char **argv);
 
-
-
-// int destroying_window(t_mlx *mlx);
-
 //events.c
-// int keyboard_events(int keycode, t_mlx *mlx);
-// int mouse_events(int event, int x, int y, t_mlx *mlx);
+int keyboard_events(int keycode, t_lib *mlx);
+int mouse_events(int event, int x, int y, t_lib *mlx);
 
+//fractal.c
+int mandelbrot(double complex_real, double complex_img);
+int julia(double complex_real, double complex_img);
 
 
 #endif

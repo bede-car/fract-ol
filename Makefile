@@ -6,7 +6,7 @@
 #    By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 20:26:37 by bede-car          #+#    #+#              #
-#    Updated: 2023/01/20 08:54:41 by bede-car         ###   ########.fr        #
+#    Updated: 2023/01/20 15:19:49 by bede-car         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,9 +18,9 @@ SOURCE = ./sources/main.c \
 		 ./sources/set_fractal.c \
 		 ./sources/errors.c \
 		 ./sources/events.c \
+		 ./sources/fractal.c \
 #		 ./sources/window.c \
 #		 ./sources/math.c \
-#		 ./sources/fract.c \
 
 OBJECTS = $(FILES:.c=.o) 
 

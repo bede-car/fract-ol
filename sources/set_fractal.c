@@ -6,38 +6,49 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 08:38:21 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/20 11:35:11 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/20 15:14:47 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
-int check_fractol_set(int argc, char ** argv)
+void check_fractol_set(int argc, char ** argv, t_math *math)
 {
-    int index;
 	if (argc == 1)
-	parameter_not_found();
+		parameter_not_found();
 	else
 	{
-	index = 0;
- 	while(argv[1][index])
+		strtolower(argv[1]);
+		if(is_mandelbrot(argc, argv) == SUCCESS)
 		{
-			argv[1][index] = ft_tolower(argv[1][index]);
- 			index++;
- 		}
-	if(is_mandelbrot(argc, argv) == SUCCESS)
-		return(SUCCESS);
-	if(is_julia(argc, argv) == SUCCESS)
-		return(SUCCESS);			
+			math->fractal = mandelbrot;
+			return ;
+		}
+		if(is_julia(argc, argv) == SUCCESS)
+		{
+			math->fractal = julia;
+			return ;			
+		}
 	}
 	invalid_option();
-	return(ERROR);
+}
+
+void strtolower(char *str)
+{
+	int index;
+
+	index = 0;
+ 	while(str[index])
+	{
+		str[index] = ft_tolower(str[index]);
+ 		index++;
+ 	}
 }
 
 int	is_julia(int argc, char **argv)
 {
 	if(ft_strncmp(argv[1], "julia", 6) == 0 && argc == 4)
-		//if()
+		//if() preciso tratar o argv 2 e 3 dentre numeros validos
  			return(SUCCESS);
 	if(ft_strncmp(argv[1], "julia", 6) == 0 && argc != 4)
 		error_julia();
