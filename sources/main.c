@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 20:58:11 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/20 16:22:41 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/20 18:04:00 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 int main(int argc, char** argv)
 {
 	t_data	data;
-	check_fractol_set(argc, argv, &data.math);
+	check_fractal_set(argc, argv, &data.math);
 	if(creating_window(&data.lib) == SUCCESS && creating_image(&data.lib) == SUCCESS)
 	{
 		//eventos
-		//desenhar pixel
+		render_fractal(&data);
 		mlx_loop(data.lib.mlx);
 	}
 	return(ERROR);
@@ -48,7 +48,7 @@ int creating_image(t_lib *lib)
 			return(ERROR);
 		}
 	lib->add_img = mlx_get_data_addr(lib->img, &lib->bits_per_pixel, \
-	&lib->size_line, &lib->endian);	
+	&lib->line_length, &lib->endian);	
 	return(SUCCESS);
 }
 

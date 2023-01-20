@@ -6,13 +6,13 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 08:38:21 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/20 15:14:47 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/20 17:38:59 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
-void check_fractol_set(int argc, char ** argv, t_math *math)
+void check_fractal_set(int argc, char ** argv, t_math *math)
 {
 	if (argc == 1)
 		parameter_not_found();
