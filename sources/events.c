@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   events.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wwalas- <wwallas-@student.42sp.org.br>     +#+  +:+       +#+        */
+/*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 23:51:24 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/21 15:58:24 by wwalas-          ###   ########.fr       */
+/*   Updated: 2023/01/21 16:20:54 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	keyboard_events(int keycode, t_data *data)
 {
 	if (keycode == XK_Escape)
-		destroying_window(data->lib.mlx);
+		destroying_window(&data->lib);
 	return (SUCCESS);
 }
 
