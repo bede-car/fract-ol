@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   events.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: wwalas- <wwallas-@student.42sp.org.br>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 23:51:24 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/21 12:52:14 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/21 15:58:24 by wwalas-          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
-int keyboard_events(int keycode, t_data *data)
+int	keyboard_events(int keycode, t_data *data)
 {
-	if(keycode == XK_Escape)
+	if (keycode == XK_Escape)
 		destroying_window(data->lib.mlx);
-	return(SUCCESS);
+	return (SUCCESS);
 }
 
-int mouse_events(int event, int x, int y, t_data *data)
+int	mouse_events(int event, int x, int y, t_data *data)
 {
 	(void)x;
 	(void)y;
@@ -40,5 +40,5 @@ int mouse_events(int event, int x, int y, t_data *data)
 		data->math.y_min *= 0.885;
 	}
 	render_fractal(data);
-	return(SUCCESS);
+	return (SUCCESS);
 }

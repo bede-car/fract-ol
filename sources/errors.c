@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: wwalas- <wwallas-@student.42sp.org.br>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 20:58:14 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/20 12:01:57 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/21 15:57:54 by wwalas-          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	invalid_option(void)
 	ft_printf("\tMandelbrot\n\tJulia parameter1 parameter2\n\n");
 	ft_printf("Exemples: \n");
 	ft_printf("\t$./fractol mandelbrot\n");
-	ft_printf("\t$./fractol julia 0.4 -0.6\n\n");	
+	ft_printf("\t$./fractol julia 0.4 -0.6\n\n");
 	ft_printf("Notes: Uppercase or lowercase letters are accepted, ");
 	ft_printf("enjoy the view!\n\n");
 	exit(ERROR);
@@ -40,4 +40,3 @@ void	error_julia(void)
 {
 	ft_printf("\n>>>>> Julia needs 2 parameters as arguments.<<<<<\n\n");
 }
-
