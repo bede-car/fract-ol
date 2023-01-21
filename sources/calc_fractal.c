@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 18:36:12 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/21 10:17:06 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/21 11:55:29 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	julia(t_math *math)
 	{
 		math->x_square = math->number_real * math->number_real;
 		math->y_square = math->number_img * math->number_img;
-		math->number_img = 2 * math->number_real * math->number_img + math->julia_x;
+		math->number_img = (2 * math->number_real * math->number_img) - math->julia_x;
 		math->number_real = math->x_square - math->y_square + math->julia_y;
 		if((math->x_square + math->y_square) > 4)
 			break;
@@ -65,7 +65,7 @@ void init_math(t_math *math)
 {
 	math->x_min = -2;
 	math->x_max = 2;
-	math->y_min = -1.7;
+	math->y_min = -1.5;
 	// math->y_max = 1.7;
 	math->y_max = math->y_min + (math->x_max - math->x_min) * HEIGHT / WIDTH;
 	math->max_interation = 100;
