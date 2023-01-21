@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 20:58:00 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/20 21:02:04 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/20 21:39:57 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,6 @@ typedef struct	s_lib //variáveis da mlx
 	char *add_img;
 	int bits_per_pixel;
 	int line_length;
-	int	size_line;
 	int endian;
 }t_lib;
 

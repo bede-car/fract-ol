@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 18:36:12 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/20 20:54:23 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/20 21:51:43 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ void mandelbrot(t_math *math)
     {
         math->x_square = math->number_real * math->number_real;
         math->y_square = math->number_img * math->number_img;
-        math->number_real = math->x_square - math->y_square + math->complex_real;
         math->number_img = 2 * math->number_real * math->number_img + math->complex_img;
+        math->number_real = math->x_square - math->y_square + math->complex_real;
         if((math->x_square + math->y_square) > 4)
             break;
         math->interations++;       
@@ -53,8 +53,8 @@ void init_math(t_math *math)
 {
     math->x_min = -2;
     math->x_max = 2;
-    math->y_min = -1;
-    math->y_max = 1;
+    math->y_min = -1.5;
+    math->y_max = 1.5;
     math->max_interation = 100;
 }
 
