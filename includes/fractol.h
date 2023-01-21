@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 20:58:00 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/21 11:01:12 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/21 12:47:09 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,8 +90,7 @@ int	is_julia(int argc, char **argv);
 
 //events.c
 int keyboard_events(int keycode, t_data *data);
-void side_move(int keycode, t_data *data);
-int mouse_events(int event, int x, int y, t_lib *mlx);
+int mouse_events(int event, int x, int y, t_data *data);
 
 //render_fractal.c
 void render_fractal(t_data *data);

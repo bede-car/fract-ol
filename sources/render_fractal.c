@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 15:17:49 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/21 11:47:06 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/21 12:50:06 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,17 +53,17 @@ int define_color(t_math *math)
 	return (rgb[0] << 16 | rgb[1] << 8 | rgb[2]);
 }
 
-void re_render_fractal(t_data *data)
-{
-	mlx_destroy_image(data->lib.mlx, data->lib.img);
-	data->lib.img = mlx_new_image(data->lib.img, WIDTH, HEIGHT);
-	// if(lib->img == NULL)
-	// {
-	// 		free(lib->mlx);
-	// 		return(ERROR);
-	// }
-	render_fractal(data);	
-}
+// void re_render_fractal(t_data *data)
+// {
+// 	mlx_destroy_image(data->lib.mlx, data->lib.img);
+// 	data->lib.img = mlx_new_image(data->lib.img, WIDTH, HEIGHT);
+// 	// if(lib->img == NULL)
+// 	// {
+// 	// 		free(lib->mlx);
+// 	// 		return(ERROR);
+// 	// }
+// 	render_fractal(data);	
+// }
 
 // void	apply_changes(t_mlx *mlx)
 // {

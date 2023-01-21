@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 08:38:21 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/21 10:16:08 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/21 13:16:38 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void check_fractal_set(int argc, char ** argv, t_math *math)
 		{
 			math->fractal = julia;
 			math->julia_x = ft_atof(argv[2]);
-			math->julia_x = ft_atof(argv[3]);			
+			math->julia_y = ft_atof(argv[3]);			
 			return ;			
 		}
 	}
