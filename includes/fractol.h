@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 20:58:00 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/20 22:27:53 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/20 23:37:43 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ int mouse_events(int event, int x, int y, t_lib *mlx);
 //render_fractal.c
 void render_fractal(t_data *data);
 void my_mlx_pixel_put(t_lib *lib, int x, int y, int color);
-int define_color();
+int define_color(t_math *math);
 
 //calc_fractal.c
 void complex_numbers(t_math *math);
