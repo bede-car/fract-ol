@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 18:36:12 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/20 22:37:55 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/21 10:17:06 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,6 @@ void	julia(t_math *math)
 	math->interations = 0;
 	math->number_real = math->complex_real;
 	math->number_img = math->complex_img;
-	math->julia_x = -0.4;
-	math->julia_y = -0.6;
 	while(math->interations < math->max_interation)
 	{
 		math->x_square = math->number_real * math->number_real;

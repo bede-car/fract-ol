@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 08:38:21 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/20 18:58:35 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/21 10:16:08 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ void check_fractal_set(int argc, char ** argv, t_math *math)
 		if(is_julia(argc, argv) == SUCCESS)
 		{
 			math->fractal = julia;
+			math->julia_x = ft_atof(argv[2]);
+			math->julia_x = ft_atof(argv[3]);			
 			return ;			
 		}
 	}
@@ -48,7 +50,7 @@ void strtolower(char *str)
 int	is_julia(int argc, char **argv)
 {
 	if(ft_strncmp(argv[1], "julia", 6) == 0 && argc == 4)
-		//if() preciso tratar o argv 2 e 3 dentre numeros validos
+		if(ft_isnum(argv[2]) && ft_isnum(argv[3]))
  			return(SUCCESS);
 	if(ft_strncmp(argv[1], "julia", 6) == 0 && argc != 4)
 		error_julia();
@@ -63,26 +65,3 @@ int	is_mandelbrot(int argc, char **argv)
 		error_mandelbrot();
 	return (ERROR);
 }
-
-
-//primeira versão de tratativa de erro
-// int check_fractol_set(int argc, char ** argv)
-// {
-//     int index;
-// 	if(argc >= 2 && argc <= 4)
-// 	{
-// 		index = 0;
-// 		while(argv[1][index])
-// 		{
-// 			argv[1][index] = ft_tolower(argv[1][index]);
-// 			index++;
-// 		}
-// 		if(ft_strncmp(argv[1], "mandelbrot", 11) == 0 && argc == 2)
-// 			return(SUCCESS);
-// 		if(ft_strncmp(argv[1], "julia", 6) == 0 && argc == 4)
-// 			return(SUCCESS);
-//     }
-
-//     ft_printf(MSG0"\n"MSG1"\n"MSG2"\n"MSG3);
-//     return(ERROR);
-// }

@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 02:03:58 by bede-car          #+#    #+#             */
-/*   Updated: 2022/06/26 05:23:46 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/21 10:11:11 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,10 @@ typedef struct s_list
 }	t_list;
 
 int			ft_atoi(const char *nptr);
+double		ft_atof(char *str);
 void		ft_bzero(void *s, size_t n);
 void		*ft_calloc(size_t nmemb, size_t size);
+int			ft_isnum(char *s);
 int			ft_isalnum(int c);
 int			ft_isalpha(int c);
 int			ft_isascii(int c);

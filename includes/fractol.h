@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 20:58:00 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/20 23:37:43 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/21 11:01:12 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,15 @@
 #include <X11/keysym.h>
 #include "../libftprintf/source/ft_printf.h"
 
-//auxiliares para retorno de função 0 -> ok diferente -> erro
+
 # define ERROR EXIT_FAILURE
 # define SUCCESS EXIT_SUCCESS
-//definições da janela
 # define WIDTH 600
-# define HEIGHT 600
+# define HEIGHT 500
+# define KEY_LEFT 65361
+# define KEY_UP 65362
+# define KEY_RIGHT 65363
+# define KEY_DOWN 65364
 
 typedef struct	s_math //variáveis dos cálculos.
 {
@@ -86,7 +89,8 @@ int	is_mandelbrot(int argc, char **argv);
 int	is_julia(int argc, char **argv);
 
 //events.c
-int keyboard_events(int keycode, t_lib *mlx);
+int keyboard_events(int keycode, t_data *data);
+void side_move(int keycode, t_data *data);
 int mouse_events(int event, int x, int y, t_lib *mlx);
 
 //render_fractal.c
@@ -99,7 +103,5 @@ void complex_numbers(t_math *math);
 void mandelbrot(t_math *math);
 void julia(t_math *math);
 void init_math(t_math *math);
-
-
 
 #endif

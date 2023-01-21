@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 20:58:11 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/20 23:51:32 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/21 11:15:21 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ int main(int argc, char** argv)
 	check_fractal_set(argc, argv, &data.math);
 	if(creating_window(&data.lib) == SUCCESS && creating_image(&data.lib) == SUCCESS)
 	{
-		// mlx_hook(data.lib.win, 2, 1L<<0, keyboard_events, &data);
 		mlx_key_hook(data.lib.win, keyboard_events, &data);
 		mlx_mouse_hook(data.lib.win, mouse_events, &data);
 		mlx_hook(data.lib.win, 17, 1L<<17, destroying_window, &data);
+		init_math(&data.math);
 		render_fractal(&data);
-		mlx_put_image_to_window(data.lib.mlx, data.lib.win, data.lib.img, 0, 0);
+		//mlx_put_image_to_window(data.lib.mlx, data.lib.win, data.lib.img, 0, 0);
 		mlx_loop(data.lib.mlx);
 	}
 	return(ERROR);
