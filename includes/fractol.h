@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 20:58:00 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/20 21:39:57 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/20 22:27:53 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 #include <mlx.h>
 #include <X11/X.h>
 #include <X11/keysym.h>
@@ -42,6 +43,8 @@ typedef struct	s_math //variáveis dos cálculos.
 	double y_square;
 	double number_real;
 	double number_img;
+	double julia_x;
+	double julia_y;
 	int interations;
 	int max_interation;
 	void (*fractal)(struct s_math *math);

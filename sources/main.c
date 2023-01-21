@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 20:58:11 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/20 21:42:55 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/20 22:09:03 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ int main(int argc, char** argv)
 	{
 		//eventos
 		render_fractal(&data);
-		//my_mlx_pixel_put(&data.lib, 50, 50, 0x00FF0000);
 		mlx_put_image_to_window(data.lib.mlx, data.lib.win, data.lib.img, 0, 0);
 		mlx_loop(data.lib.mlx);
 	}
