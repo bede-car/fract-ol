@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 20:57:28 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/22 12:28:14 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/22 13:16:18 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	keyboard_events(int keycode, t_data *data)
 	if (keycode == XK_Escape)
 		destroying_window(&data->lib);
 	move_key_arrow(keycode, data);
-	if (keycode == 99)
+	if (keycode == XK_c)
 	{
 		data->math.color++;
 		if (data->math.color == 4)
