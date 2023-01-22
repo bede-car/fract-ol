@@ -13,12 +13,8 @@
 #ifndef FRACTOL_H
 # define FRACTOL_H
 
-// # include <stdlib.h>
-// # include <stdio.h>
-// # include <string.h>
 # include <math.h>
 # include <mlx.h>
-// # include <X11/X.h>
 # include <X11/keysym.h>
 # include "../libftprintf/source/ft_printf.h"
 
