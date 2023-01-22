@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 15:17:49 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/22 21:14:38 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/22 21:34:44 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	render_fractal(t_data *data)
 		data->math.pixel_x++;
 	}
 	mlx_put_image_to_window(data->lib.mlx, data->lib.win, data->lib.img, 0, 0);
-	return(SUCCESS);
+	return (SUCCESS);
 }
 
 void	my_mlx_pixel_put(t_lib *lib, int x, int y, int color)
