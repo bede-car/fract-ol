@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 21:00:28 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/21 22:05:38 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/21 22:46:40 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ typedef struct s_math
 	double	x_max;
 	double	y_min;
 	double	y_max;
+	double	x_med;
+	double	y_med;
 	double	x_square;
 	double	y_square;
 	double	number_real;

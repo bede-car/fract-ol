@@ -6,11 +6,11 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 18:36:12 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/21 21:11:19 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/21 22:51:02 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fractol.h"
+#include "../includes/fractol_bonus.h"
 
 void	complex_numbers(t_math *math)
 {

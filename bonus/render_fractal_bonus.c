@@ -6,11 +6,11 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 15:17:49 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/21 21:11:35 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/21 22:51:13 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fractol.h"
+#include "../includes/fractol_bonus.h"
 
 void	render_fractal(t_data *data)
 {

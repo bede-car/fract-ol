@@ -6,11 +6,11 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 20:58:14 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/21 21:11:23 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/21 22:51:07 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fractol.h"
+#include "../includes/fractol_bonus.h"
 
 void	invalid_option(void)
 {
