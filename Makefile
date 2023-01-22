@@ -26,7 +26,8 @@ PATH_B		=	./bonus/
 OBJS		=	$(addprefix $(PATH_M), $(MANDATORY:.c=.o))
 OBJS_B		=	$(addprefix $(PATH_B), $(BONUS:.c=.o))
 
-CFLAG		=	-lmlx -lX11 -lXext -Imlx -lm -Wall -Wextra -Werror -I./includes
+CFLAG		=	-lmlx -lX11 -lXext -Imlx -lm -Wall -Wextra -Werror 
+
 MAKEFLAGS	=	--no-print-directory
 
 HEADER		=	./includes/fractol.h
