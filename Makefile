@@ -6,7 +6,7 @@
 #    By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 20:26:37 by bede-car          #+#    #+#              #
-#    Updated: 2023/01/22 11:18:56 by bede-car         ###   ########.fr        #
+#    Updated: 2023/01/22 19:16:31 by bede-car         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,12 +26,12 @@ PATH_B		=	./bonus/
 OBJS		=	$(addprefix $(PATH_M), $(MANDATORY:.c=.o))
 OBJS_B		=	$(addprefix $(PATH_B), $(BONUS:.c=.o))
 
-CFLAG		=	-lmlx -lX11 -lXext -Imlx -lm -Wall -Wextra -Werror 
+CFLAG		=	-lmlx -lX11 -lXext -Imlx -lm -Wall -Wextra -Werror
 
 MAKEFLAGS	=	--no-print-directory
 
-HEADER		=	./includes/fractol.h
-HEADER_B	=	./includes/fractol_bonus.h
+HEADER		=	-I./includes/fractol.h
+HEADER_B	=	-I./includes/fractol_bonus.h
 
 LIB 		=	./libftprintf/libftprintf.a
 
