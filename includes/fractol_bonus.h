@@ -6,13 +6,12 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 21:00:28 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/21 22:46:40 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/21 23:09:14 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#ifndef FRACTOL_H
-# define FRACTOL_H
+#ifndef FRACTOL_BONUS_H
+# define FRACTOL_BONUS_H
 
 # include <stdlib.h>
 # include <stdio.h>
