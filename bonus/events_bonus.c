@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 20:57:28 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/22 00:26:18 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/22 12:28:14 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,9 @@ int	mouse_events(int event, int x, int y, t_data *data)
 	(void)y;
 	data->math.x_med = (data->math.x_max - data->math.x_min);
 	data->math.y_med = (data->math.y_max - data->math.y_min);
-	if (event != 4 && event != 5)
+	if (event != SCROLL_DOWN && event != SCROLL_UP)
 		return (ERROR);
-	if (event == 5)
+	if (event == SCROLL_UP)
 	{
 		data->math.x_max += data->math.x_med * 0.115;
 		data->math.x_min -= data->math.x_med * 0.115;
@@ -70,7 +70,7 @@ int	mouse_events(int event, int x, int y, t_data *data)
 		data->math.y_max = data->math.y_min + \
 		(data->math.x_max - data->math.x_min) * HEIGHT / WIDTH;
 	}
-	else if (event == 4)
+	else if (event == SCROLL_DOWN)
 	{
 		data->math.x_max -= data->math.x_med * 0.115;
 		data->math.x_min += data->math.x_med * 0.115;

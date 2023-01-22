@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 23:51:24 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/21 21:11:56 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/22 12:26:01 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,16 @@ int	mouse_events(int event, int x, int y, t_data *data)
 {
 	(void)x;
 	(void)y;
-	if (event != 4 && event != 5)
+	if (event != SCROLL_DOWN && event != SCROLL_UP)
 		return (ERROR);
-	if (event == 5)
+	if (event == SCROLL_UP)
 	{
 		data->math.x_max *= 1.115;
 		data->math.x_min *= 1.115;
 		data->math.y_max *= 1.115;
 		data->math.y_min *= 1.115;
 	}
-	else if (event == 4)
+	else if (event == SCROLL_DOWN)
 	{
 		data->math.x_max *= 0.885;
 		data->math.x_min *= 0.885;

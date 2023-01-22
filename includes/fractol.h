@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 20:58:00 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/22 11:36:11 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/22 12:25:41 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@
 # define SUCCESS EXIT_SUCCESS
 # define WIDTH 600
 # define HEIGHT 500
+# define SCROLL_UP 5
+# define SCROLL_DOWN 4
 
 typedef struct s_math
 {
