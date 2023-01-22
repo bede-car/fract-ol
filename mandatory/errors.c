@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 20:58:14 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/21 21:11:50 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/22 13:06:07 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,5 @@ void	error_mandelbrot(void)
 
 void	error_julia(void)
 {
-	ft_printf("\n>>>>> Julia needs 2 parameters as arguments.<<<<<\n\n");
+	ft_printf("\n>>>>>Julia's set needs 2 parameters as arguments.<<<<<\n\n");
 }
