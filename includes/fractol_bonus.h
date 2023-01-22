@@ -1,14 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fractol.h                                          :+:      :+:    :+:   */
+/*   fractol_bonus.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/18 20:58:00 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/21 21:12:31 by bede-car         ###   ########.fr       */
+/*   Created: 2023/01/21 21:00:28 by bede-car          #+#    #+#             */
+/*   Updated: 2023/01/21 22:05:38 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef FRACTOL_H
 # define FRACTOL_H
@@ -83,6 +84,7 @@ void	check_fractal_set(int argc, char **argv, t_math *math);
 void	strtolower(char *str);
 int		is_mandelbrot(int argc, char **argv);
 int		is_julia(int argc, char **argv);
+void	move_key_arrow(int keycode, t_data *data);
 int		keyboard_events(int keycode, t_data *data);
 int		mouse_events(int event, int x, int y, t_data *data);
 void	render_fractal(t_data *data);
