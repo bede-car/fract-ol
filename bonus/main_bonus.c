@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 20:58:11 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/22 00:13:18 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/22 00:26:47 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int	main(int argc, char **argv)
 	creating_image(&data.lib) == SUCCESS)
 	{
 		init_math(&data.math);
-		// data.math.color = 1;
 		mlx_key_hook(data.lib.win, keyboard_events, &data);
 		mlx_mouse_hook(data.lib.win, mouse_events, &data);
 		mlx_hook(data.lib.win, 17, 1L << 17, destroying_window, &data);
