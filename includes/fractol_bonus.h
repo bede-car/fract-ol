@@ -6,19 +6,19 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 21:00:28 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/22 00:04:52 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/22 11:41:33 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRACTOL_BONUS_H
 # define FRACTOL_BONUS_H
 
-# include <stdlib.h>
-# include <stdio.h>
-# include <string.h>
+// # include <stdlib.h>
+// # include <stdio.h>
+// # include <string.h>
 # include <math.h>
 # include <mlx.h>
-# include <X11/X.h>
+// # include <X11/X.h>
 # include <X11/keysym.h>
 # include "../libftprintf/source/ft_printf.h"
 
@@ -41,8 +41,6 @@ typedef struct s_math
 	double	x_max;
 	double	y_min;
 	double	y_max;
-	double	x_med;
-	double	y_med;
 	double	x_square;
 	double	y_square;
 	double	number_real;
@@ -51,8 +49,10 @@ typedef struct s_math
 	double	julia_y;
 	int		interations;
 	int		max_interation;
-	int		color;
 	void	(*fractal)(struct s_math *math);
+	double	x_med;
+	double	y_med;
+	int		color;
 
 }	t_math;
 
@@ -86,16 +86,16 @@ void	check_fractal_set(int argc, char **argv, t_math *math);
 void	strtolower(char *str);
 int		is_mandelbrot(int argc, char **argv);
 int		is_julia(int argc, char **argv);
-void	move_key_arrow(int keycode, t_data *data);
 int		keyboard_events(int keycode, t_data *data);
 int		mouse_events(int event, int x, int y, t_data *data);
 void	render_fractal(t_data *data);
 void	my_mlx_pixel_put(t_lib *lib, int x, int y, int color);
 int		define_color(t_math *math);
-int		change_color(t_math *math);
 void	complex_numbers(t_math *math);
 void	mandelbrot(t_math *math);
 void	julia(t_math *math);
 void	init_math(t_math *math);
+void	move_key_arrow(int keycode, t_data *data);
+int		change_color(t_math *math);
 
 #endif
