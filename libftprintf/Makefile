@@ -6,7 +6,7 @@
 #    By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/06 01:13:21 by bede-car          #+#    #+#              #
-#    Updated: 2023/01/20 16:40:01 by bede-car         ###   ########.fr        #
+#    Updated: 2023/01/22 10:56:02 by bede-car         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ FILES = ./source/ft_printf.c \
 		./source/print_signed_decimal_integer.c \
 		./source/print_unsigned_decimal_integer.c \
 		./source/print_unsigned_hexadecimal_integer.c \
-				
+
 NAME = libftprintf.a
 
 OBJS	= $(FILES:.c=.o) 
