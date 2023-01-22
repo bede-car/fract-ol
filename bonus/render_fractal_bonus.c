@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 15:17:49 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/22 00:44:11 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/22 00:48:31 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,9 +67,9 @@ int	change_color(t_math *math)
 	}
 	else if (math->color == 3)
 	{
-	rgb[0] = sin(0.05 * math->interations + 5) * 127 + 128;
-	rgb[1] = sin(0.05 * math->interations + 6) * 127 + 128;
-	rgb[2] = sin(0.05 * math->interations + 7) * 127 + 128;
+	rgb[0] = sin(0.05 * math->interations + 50) * 127 + 128;
+	rgb[1] = sin(0.05 * math->interations + 30) * 127 + 128;
+	rgb[2] = sin(0.05 * math->interations + 1) * 127 + 128;
 	}
 	return (rgb[0] << 16 | rgb[1] << 8 | rgb[2]);
 }
