@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 20:58:00 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/21 21:12:31 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/21 23:12:17 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,6 @@
 # define SUCCESS EXIT_SUCCESS
 # define WIDTH 600
 # define HEIGHT 500
-# define KEY_LEFT 65361
-# define KEY_UP 65362
-# define KEY_RIGHT 65363
-# define KEY_DOWN 65364
 
 typedef struct s_math
 {

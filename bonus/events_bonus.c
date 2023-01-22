@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 20:57:28 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/21 23:08:01 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/21 23:15:29 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,7 @@ int	keyboard_events(int keycode, t_data *data)
 {
 	if (keycode == XK_Escape)
 		destroying_window(&data->lib);
-	if (keycode > 65360 && keycode < 65365)
-		move_key_arrow(keycode, data);
+	move_key_arrow(keycode, data);
 	return (SUCCESS);
 }
 
@@ -74,3 +73,4 @@ int	mouse_events(int event, int x, int y, t_data *data)
 	}
 	render_fractal(data);
 	return (SUCCESS);
+}
