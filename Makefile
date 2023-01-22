@@ -6,7 +6,7 @@
 #    By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 20:26:37 by bede-car          #+#    #+#              #
-#    Updated: 2023/01/21 22:20:34 by bede-car         ###   ########.fr        #
+#    Updated: 2023/01/22 10:53:42 by bede-car         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,24 +14,21 @@ NAME = fractol
 
 LIB = ./libftprintf/libftprintf.a
 
-SOURCE = ./mandatory/main.c \
-		 ./mandatory/set_fractal.c \
-		 ./mandatory/errors.c \
-		 ./mandatory/events.c \
-		 ./mandatory/render_fractal.c \
-		 ./mandatory/calc_fractal.c 	
+PATH_M = ./mandatory/
 
-BONUS =  ./bonus/main_bonus.c \
-		 ./bonus/set_fractal_bonus.c \
-		 ./bonus/errors_bonus.c \
-		 ./bonus/events_bonus.c \
-		 ./bonus/render_fractal_bonus.c \
-		 ./bonus/calc_fractal_bonus.c  
+MANDATORY = main.c set_fractal.c \
+			errors.c events.c \
+			render_fractal.c calc_fractal.c 	
 
+PATH_B = ./bonus/
 
-OBJS = $(SOURCE:.c=.o) 
+BONUS = main_bonus.c set_fractal_bonus.c \
+		errors_bonus.c events_bonus.c \
+		render_fractal_bonus.c calc_fractal_bonus.c  
 
-OBJS_B = $(BONUS:.c=.o) 
+OBJS = $(addprefix $(PATH_M), $(MANDATORY:.c=.o))
+
+OBJS_B = $(addprefix $(PATH_B), $(BONUS:.c=.o))
 
 CFLAG = -Imlx -Lmlx -lmlx -lXext -lX11 -lm -Wall -Wextra -Werror -I./includes
 
@@ -74,6 +71,5 @@ fclean : clean
 
 re : fclean
 	make
-
 
 .PHONY:	all libftprintf clean fclean re

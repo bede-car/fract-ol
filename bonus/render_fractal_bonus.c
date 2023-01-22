@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 15:17:49 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/22 00:48:31 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/22 10:00:40 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,15 +55,15 @@ int	change_color(t_math *math)
 	math->fractal(math);
 	if (math->color == 1)
 	{
-	rgb[0] = sin(0.05 * math->interations + 58) * 127 + 128;
-	rgb[1] = sin(0.05 * math->interations + 4) * 127 + 128;
-	rgb[2] = sin(0.05 * math->interations + 100) * 127 + 128;
+	rgb[0] = sin(0.05 * math->interations + 58) * 126 + 127;
+	rgb[1] = sin(0.05 * math->interations + 4) * 126 + 127;
+	rgb[2] = sin(0.05 * math->interations + 100) * 126 + 127;
 	}
 	else if (math->color == 2)
 	{
-	rgb[0] = sin(0.1 * math->interations + 100) * 127 + 128;
-	rgb[1] = sin(0.1 * math->interations + 6) * 127 + 128;
-	rgb[2] = sin(0.1 * math->interations + 70) * 127 + 128;
+	rgb[0] = sin(0.1 * math->interations + 100) * 120 + 126;
+	rgb[1] = sin(0.1 * math->interations + 6) * 120 + 126;
+	rgb[2] = sin(0.1 * math->interations + 70) * 120 + 126;
 	}
 	else if (math->color == 3)
 	{
