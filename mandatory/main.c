@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 20:58:11 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/22 21:11:48 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/22 21:20:12 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	creating_window(t_lib *lib)
 	lib->mlx = mlx_init();
 	if (lib->mlx == NULL)
 		return (ERROR);
-	lib->win = mlx_new_window(lib->mlx, WIDTH, HEIGHT, "Fract’ol");
+	lib->win = mlx_new_window(lib->mlx, WIDTH, HEIGHT, "Fract-ol");
 	if (lib->win == NULL)
 	{
 		free(lib->mlx);

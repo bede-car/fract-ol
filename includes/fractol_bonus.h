@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 21:00:28 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/22 12:27:11 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/22 21:16:15 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ int		is_mandelbrot(int argc, char **argv);
 int		is_julia(int argc, char **argv);
 int		keyboard_events(int keycode, t_data *data);
 int		mouse_events(int event, int x, int y, t_data *data);
-void	render_fractal(t_data *data);
+int		render_fractal(t_data *data);
 void	my_mlx_pixel_put(t_lib *lib, int x, int y, int color);
 int		define_color(t_math *math);
 void	complex_numbers(t_math *math);

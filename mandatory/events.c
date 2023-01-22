@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 23:51:24 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/22 20:21:24 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/22 21:14:27 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,6 @@ int	keyboard_events(int keycode, t_data *data)
 		destroying_window(&data->lib);
 	return (SUCCESS);
 }
-
-// int refresh_render(t_data *data)
-// {
-// 	if
-// }
 
 int	mouse_events(int event, int x, int y, t_data *data)
 {
