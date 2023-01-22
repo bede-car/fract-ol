@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 18:36:12 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/21 22:51:02 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/22 00:13:36 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,5 @@ void	init_math(t_math *math)
 	math->y_min = -1.5;
 	math->y_max = math->y_min + (math->x_max - math->x_min) * HEIGHT / WIDTH;
 	math->max_interation = 100;
+	math->color = 1;
 }
