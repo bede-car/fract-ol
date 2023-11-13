@@ -6,7 +6,7 @@
 /*   By: bede-car <bede-car@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 20:58:11 by bede-car          #+#    #+#             */
-/*   Updated: 2023/01/22 11:46:05 by bede-car         ###   ########.fr       */
+/*   Updated: 2023/01/22 21:20:12 by bede-car         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int	main(int argc, char **argv)
 		mlx_mouse_hook(data.lib.win, mouse_events, &data);
 		mlx_hook(data.lib.win, 17, 1L << 17, destroying_window, &data);
 		render_fractal(&data);
+		mlx_expose_hook(data.lib.win, render_fractal, &data);
 		mlx_loop(data.lib.mlx);
 	}
 	return (ERROR);
@@ -35,7 +36,7 @@ int	creating_window(t_lib *lib)
 	lib->mlx = mlx_init();
 	if (lib->mlx == NULL)
 		return (ERROR);
-	lib->win = mlx_new_window(lib->mlx, WIDTH, HEIGHT, "Fract’ol");
+	lib->win = mlx_new_window(lib->mlx, WIDTH, HEIGHT, "Fract-ol");
 	if (lib->win == NULL)
 	{
 		free(lib->mlx);
